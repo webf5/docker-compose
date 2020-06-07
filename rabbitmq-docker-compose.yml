@@ -1,0 +1,19 @@
+version: "3"
+services: 
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports: 
+      -  56710:5671
+      - 56720:5672
+      - 43690:4369
+      - 25672:25672
+      - 15671:15671
+      - 15672:15672
+
+    volumes: 
+      - /root/RabbitMq:/var/lib/rabbitmq
+    restart: always
+    
+
+    
